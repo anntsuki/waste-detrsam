@@ -7,5 +7,5 @@ from ultralytics import RTDETR
 # 导出参数官方详解链接：https://docs.ultralytics.com/modes/export/#usage-examples
 
 if __name__ == '__main__':
-    model = RTDETR('rtdetr-weight-path')
+    model = RTDETR('rt-detr-weight-path')
     model.export(format='onnx', simplify=True)

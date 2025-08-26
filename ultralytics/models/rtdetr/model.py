@@ -21,15 +21,15 @@ class RTDETR(Model):
     with high accuracy. It supports efficient hybrid encoding, IoU-aware query selection, and adaptable inference speed.
 
     Attributes:
-        model (str): Path to the pre-trained model. Defaults to 'rtdetr-l.pt'.
+        model (str): Path to the pre-trained model. Defaults to 'rt-detr-l.pt'.
     """
 
-    def __init__(self, model='rtdetr-l.pt') -> None:
+    def __init__(self, model='rt-detr-l.pt') -> None:
         """
         Initializes the RT-DETR model with the given pre-trained model file. Supports .pt and .yaml formats.
 
         Args:
-            model (str): Path to the pre-trained model. Defaults to 'rtdetr-l.pt'.
+            model (str): Path to the pre-trained model. Defaults to 'rt-detr-l.pt'.
 
         Raises:
             NotImplementedError: If the model file extension is not 'pt', 'yaml', or 'yml'.

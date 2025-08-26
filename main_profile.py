@@ -5,7 +5,7 @@ from ultralytics import RTDETR
 
 if __name__ == '__main__':
     # choose your yaml file
-    model = RTDETR('ultralytics/cfg/models/rt-detr/rtdetr-r18.yaml')
+    model = RTDETR('ultralytics/cfg/models/rt-detr/rt-detr-r18.yaml')
     model.model.eval()
     model.info(detailed=True)
     try:

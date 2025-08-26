@@ -221,7 +221,7 @@ class rtdetr_heatmap:
 
 def get_params():
     params = {
-        'weight': 'weights/rtdetr-r18.pt',
+        'weight': 'weights/rt-detr-r18.pt',
         'device': 'cuda:0',
         'method': 'GradCAMPlusPlus', # GradCAMPlusPlus, GradCAM, XGradCAM, EigenCAM, HiResCAM, LayerCAM, RandomCAM, EigenGradCAM
         'layer': [15,19,22,25],

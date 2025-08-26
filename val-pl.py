@@ -46,10 +46,10 @@ def validate_model(args):
     # 根据命令行参数决定加载哪个模型类
     if args.model_type.lower() == 'yolo':
         from ultralytics import YOLO as ModelClass
-    elif args.model_type.lower() == 'rtdetr':
+    elif args.model_type.lower() == 'rt-detr':
         from ultralytics import RTDETR as ModelClass
     else:
-        print(f"错误: 不支持的模型类型 '{args.model_type}'。请选择 'yolo' 或 'rtdetr'。")
+        print(f"错误: 不支持的模型类型 '{args.model_type}'。请选择 'yolo' 或 'rt-detr'。")
         return
 
     # 遍历所有预先定义好的数据集进行验证
@@ -148,7 +148,7 @@ def validate_model(args):
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(description="YOLO/RT-DETR 通用模型批量验证脚本")
-    parser.add_argument('--model-type', type=str, required=True, choices=['yolo', 'rtdetr'], help="必须项: 指定模型类型, 'yolo' 或 'rtdetr'")
+    parser.add_argument('--model-type', type=str, required=True, choices=['yolo', 'rt-detr'], help="必须项: 指定模型类型, 'yolo' 或 'rt-detr'")
     parser.add_argument('--weights', type=str, required=True, help='必须项: 指向模型权重文件(.pt)的路径')
     parser.add_argument('--split', type=str, default='test', help="要验证的数据集划分 ('train', 'val', 'test')")
     parser.add_argument('--imgsz', type=int, default=640, help='验证时使用的图像尺寸')

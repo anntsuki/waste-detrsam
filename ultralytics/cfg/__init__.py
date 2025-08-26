@@ -405,7 +405,7 @@ def entrypoint(debug=''):
         model = 'yolov8n.pt'
         LOGGER.warning(f"WARNING ⚠️ 'model' is missing. Using default 'model={model}'.")
     overrides['model'] = model
-    if 'rtdetr' in model.lower():  # guess architecture
+    if 'rt-detr' in model.lower():  # guess architecture
         from ultralytics import RTDETR
         model = RTDETR(model)  # no task argument
     elif 'fastsam' in model.lower():

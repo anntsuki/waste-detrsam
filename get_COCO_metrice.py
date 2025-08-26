@@ -6,7 +6,7 @@ from tidecv import TIDE, datasets
 def parse_opt():
     parser = argparse.ArgumentParser()
     parser.add_argument('--anno_json', type=str, default='E:/zhuyunhao/RTDETR-main/dataset/severstal-steel-defect-detection/test/test.json', help='training model path')
-    parser.add_argument('--pred_json', type=str, default='E:/zhuyunhao/RTDETR-main/runs/XWE/val/rtdetr-r34_test/predictions.json', help='data yaml path')
+    parser.add_argument('--pred_json', type=str, default='E:/zhuyunhao/RTDETR-main/runs/XWE/val/rt-detr-r34_test/predictions.json', help='data yaml path')
     
     return parser.parse_known_args()[0]
 

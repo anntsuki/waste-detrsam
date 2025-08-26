@@ -421,7 +421,7 @@ class RTDETRDetectionModel(DetectionModel):
     DetectionModel base class.
 
     Attributes:
-        cfg (str): The configuration file path or preset string. Default is 'rtdetr-l.yaml'.
+        cfg (str): The configuration file path or preset string. Default is 'rt-detr-l.yaml'.
         ch (int): Number of input channels. Default is 3 (RGB).
         nc (int, optional): Number of classes for object detection. Default is None.
         verbose (bool): Specifies if summary statistics are shown during initialization. Default is True.
@@ -432,7 +432,7 @@ class RTDETRDetectionModel(DetectionModel):
         predict: Performs a forward pass through the network and returns the output.
     """
 
-    def __init__(self, cfg='rtdetr-l.yaml', ch=3, nc=None, verbose=True):
+    def __init__(self, cfg='rt-detr-l.yaml', ch=3, nc=None, verbose=True):
         """
         Initialize the RTDETRDetectionModel.
 
